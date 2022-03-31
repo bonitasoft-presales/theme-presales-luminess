@@ -1,0 +1,170 @@
+$super-light-gray: #f2f2f2;
+
+.container-box-content {
+    position: relative;
+    background: $white;
+    z-index:2;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.spacer{
+	margin-left: 5px;
+    margin-bottom: 5px;
+	}
+
+.container-box-shadow-padding{
+
+}
+.container-box-shadow{
+    position: relative;
+    background: $white;
+    z-index:1;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(4,9,20,0.03), 0 0.9375rem 1.40625rem rgba(4,9,20,0.03), 0 0.25rem 0.53125rem rgba(4,9,20,0.05), 0 0.125rem 0.1875rem rgba(4,9,20,0.03);
+    border-width: 0;
+    transition: all .2s;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border: 1px solid #e0e0e0;
+
+}
+
+.repeatable-container .repeatable-container-element:not(:first-child) label {
+	display: none;
+}
+
+.repeatable-container .repeatable-container-element:not(:first-child){
+	border-top: 1px solid #e0e0e0;
+}
+
+
+.container-header {
+    position: relative;
+    background: $white;
+    z-index:3;
+    display: flex;
+    align-items: center;
+    border-bottom-width: 1px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: .625rem;
+    height: 3.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .88rem;
+    border-bottom: 1px solid #e0e0e0;
+    color: $brand-primary;
+}
+
+.container-header-info {
+    position: relative;
+    background: $white;
+    z-index:3;
+    display: flex;
+    align-items: center;
+    border-bottom-width: 1px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: .625rem;
+    height: 3.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .88rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.info-container-prime{
+	margin-bottom: 30px !important;
+	padding: 1rem;
+    flex-direction: row;
+    z-index:2;
+    align-items: center;
+    background-image: linear-gradient(-20deg, $brand-secundary 0%, $brand-terciary 100%) !important;
+    color: #fff !important;
+    border-radius: .25rem;
+}
+
+.info-container-bis{
+	margin-bottom: 30px !important;
+	padding: 1rem;
+    flex-direction: row;
+    z-index:2;
+    align-items: center;
+    background-image: linear-gradient(to top, $brand-secundary 0%, $brand-terciary 100%) !important;
+    color: #fff !important;
+    border-radius: .25rem;
+    border: 1rem solid;
+}
+
+.info-container-ter{
+	margin-bottom: 30px !important;
+	padding: 1rem;
+    flex-direction: row;
+    z-index:2;
+    align-items: center;
+    background-image: radial-gradient(circle 248px at center, $brand-primary 0%, $brand-secundary 47%, $brand-terciary 100%) !important;
+    color: #fff !important;
+    border-radius: .25rem;
+}
+
+.info-container-padding{
+	padding-top: 1rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+}
+
+.mini-avatar{
+	max-width: 30px;
+}
+
+.vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+}
+
+.horizontal-right {
+  margin: 0;
+  position: absolute;
+  right: 0px;
+}
+
+
+.fixedFooter {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: $white;
+  width: 100%;
+  z-index:4;
+}
+
+.itemLine {
+    background: $white;
+}
+
+.itemLine:hover {
+    background: lighten($brand-info, 65%);
+}
+
+body {
+	background-color: $super-light-gray;
+}
+
+.simple-header{
+	background: $white;	
+}
+
+.app-link-container {
+	border: 2px solid lightgray;
+	overflow: hidden;
+	border-radius: 4px;
+}
+
+.app-box-container {
+	padding: 0px 20px 20px 20px;
+}

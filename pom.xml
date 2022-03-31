@@ -1,0 +1,124 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.bonitasoft.presales.theme</groupId>
+    <artifactId>theme-presales-template</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Theme for presales BPM template</name>
+    <description>Describe your project here</description>
+
+    <properties>
+        <node.version>v14.17.3</node.version>
+        <npm.version>6.14.13</npm.version>
+        <frontend-maven-plugin.version>1.12.0</frontend-maven-plugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- git hub packages-->
+        <github.owner>bonitasoft-presales</github.owner>
+        <github.repo>${project.artifactId}</github.repo>
+    </properties>
+
+    <build>
+        <defaultGoal>verify</defaultGoal>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.github.eirslett</groupId>
+                    <artifactId>frontend-maven-plugin</artifactId>
+                    <version>${frontend-maven-plugin.version}</version>
+                    <configuration>
+                        <installDirectory>${session.executionRootDirectory}</installDirectory>
+                        <nodeVersion>${node.version}</nodeVersion>
+                        <npmVersion>${npm.version}</npmVersion>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>node</directory>
+                            <followSymlinks>false</followSymlinks>
+                        </fileset>
+                        <fileset>
+                            <directory>node_modules</directory>
+                            <followSymlinks>false</followSymlinks>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>install node and npm</id>
+                        <goals>
+                            <goal>install-node-and-npm</goal>
+                            <goal>npm</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>npm build</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <phase>prepare-package</phase>
+                        <configuration>
+                            <arguments>run build</arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>page-content</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <inherited>false</inherited>
+                        <configuration>
+                            <ignoreDirFormatExtensions>true</ignoreDirFormatExtensions>
+                            <appendAssemblyId>false</appendAssemblyId>
+                            <descriptors>
+                                <descriptor>content.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <scm>
+        <url>https://github.com/${github.owner}/${github.repo}</url>
+        <developerConnection>scm:git:${project.scm.url}.git</developerConnection>
+        <connection>scm:git:${project.scm.url}.git</connection>
+        <tag>HEAD</tag>
+    </scm>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>github</id>
+            <name>Github Package</name>
+            <url>https://maven.pkg.github.com/${github.owner}/${github.repo}</url>
+        </snapshotRepository>
+        <repository>
+            <id>github</id>
+            <name>Github Package</name>
+            <url>https://maven.pkg.github.com/${github.owner}/${github.repo}</url>
+        </repository>
+    </distributionManagement>
+</project>
