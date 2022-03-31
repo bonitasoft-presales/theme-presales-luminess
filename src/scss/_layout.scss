@@ -1,0 +1,186 @@
+body {
+	font-family: "Open Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	.container-fluid > .row {
+	
+		&:first-child {
+		
+			.layout-header {
+			    background: $brand-primary;
+			    
+				.btn-link {
+				    color: white;
+				}
+			}
+			
+			@media (min-width: 768px) {
+				.logo {
+					margin-left:60px;
+				}
+				.navbar-inverse {
+				    height: 0px;
+				    min-height: 0px;
+
+					button.navbar-toggle {
+					    display: block;
+					    margin-top: -45px;
+					    border: 0px;
+					}
+					
+					.navbar-collapse {
+					    position: fixed;
+					    top: 55px;
+						border-color:	transparent;
+					    width: 0px;
+					   	height: calc(100vh - 55px) !important;
+					    background: #f6f6f6;
+					    transition: width 1s;
+					    
+						&.in {
+					   		width: 220px;
+						}
+					}
+					
+				    
+				    .container-fluid {
+					    padding-left: 0px;
+					    padding-right: 0px;
+					    
+					    .navbar-nav {
+						    margin: 0;
+							
+						    >li{
+							    width: 100%;
+							    font-size: 1.2em;
+							    cursor: pointer;
+						    	>a {
+							    	color: $brand-primary;
+					    			padding-left: 5px;
+					    			>span {	    			
+								    	vertical-align: middle;
+								    }
+							    	&:before {
+									    font-family: 'Material Design Icons';
+									    margin-right: 10px;
+									    font-weight:400;
+							    		font-size: 1.2em;
+							    		vertical-align: middle;
+									}
+								}
+								>.dropdown-menu {
+								    background: transparent !important;
+								    border: 0px;
+								    border-left: 1px solid $brand-primary;
+								    box-shadow: 0 0 0 transparent;
+								    border-radius: 0px;
+								    margin-left: 20px;
+    								position: relative;
+								    
+								    >li>a {
+							    		color: $brand-primary;
+							    		fony-weight: 600;
+									}
+								}
+				   		 	}
+				   		 	
+				   		 	>li.active>a, 
+						    >li.active>a:hover,
+						    >li.active>a:focus,
+				   		 	>li.open>a, 
+						    >li.open>a:hover,
+						    >li.open>a:focus,
+						    >li>a:hover,
+						    >li>a:focus,
+						    >li>.dropdown-menu>li>a:hover,
+						    >li>.dropdown-menu>li>a:focus {
+								color: $brand-highlight;
+								background-color: transparent;
+							}
+							
+							>li.menu.home>a::before {
+							    content: "\F02DC";
+							}
+							>li.menu.requests>a::before {
+							    content: "\F1623";
+							}
+							>li.menu.environments>a::before {
+							    content: "\F048B";
+							}
+							>li.menu.licenses>a::before {
+							    content: "\F0DAB";
+							}
+							
+							>li.menu.downloads>a::before {
+  								content: "\F0B8F";
+  							}
+  							/*subscription*/
+							>li.menu.subscriptions>a::before {
+  								content: "\F0EBF";
+  							}
+  							
+  							>li.menu.subscriptions {
+							    position: absolute;
+							    bottom: 30px;
+							    padding-top: 20px;
+							    border-top: 1px solid #1b497c;
+							    width: 190px;
+							}
+  							>li.menu.resources>a::before {
+  								content: "\F14F7";
+  							}
+  							/*support portal */
+  							>li.menu.subManagement>a::before {
+							    content: "\F0EBF";
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		@media (max-width: 767px) {
+			.breadcrumb {
+				display: none;
+			}
+		}
+		@media (min-width: 768px) {
+		
+			.breadcrumb {
+				position: absolute;
+				margin: 10px 30px;
+				width: calc(100vw - 60px);
+				&.navReduced {
+					width: calc(100vw - 310px);
+					left: 220px;
+				}
+			}
+		
+			div.layout-content {
+				/*margin-top:50px; only if breadcrumb */
+				
+			    transition: left 1s, width 1s;
+			    left: 0px;
+			    
+				&.navReduced {	
+				    left: 220px;
+				    width: calc(100vw - 220px);
+				}
+			}
+		}
+	}
+}
+
+custom-environments-datatable h3 i,
+custom-environments-datatable h4 i,
+custom-tiitle-and-button i,
+custom-title-with-icon i,
+custom-title-with-icon-info-point i,
+i.highlighted {
+    color: $brand-highlight;
+    margin-right: 10px;
+}
+
+.modal-content {
+	form.col-xs-12.col-sm-12.col-md-12.col-lg-12 {
+	    padding: 0px;
+	}
+}

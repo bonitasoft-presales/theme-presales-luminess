@@ -1,0 +1,9 @@
+.alert-annoucement {
+    background-color: $brand-pink;
+    border-color: $brand-pink;
+    color: #ffffff;
+}
+
+.alert.noextramargin p {
+    margin: 0px;
+}

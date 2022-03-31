@@ -6,4 +6,253 @@
 
 @import "bonita_buttons";
 @import "bonita_pager";
-@import "presalesCSS";
+@import "alert";
+@import "panel";
+@import "layout";
+@import "margins";
+@import "tables";
+@import "presalesCSS"
+
+@import "../fontawesome/css/all.min";
+@import "../opensans/opensans";
+@import "../materialdesignicons/materialdesignicons";
+
+//Bonita variables
+@import "bonita_variables";
+
+
+label {
+    font-family: 'Open Sans';
+    font-weight: 600;
+}
+
+.navbar-inverse {
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+}
+
+
+
+div.htmlInput > pb-text > p,
+div.htmlInput > pb-text > div > div > p {
+		background-color: #eee;
+	    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	    border-radius: 4px;
+	    border: 1px solid #ccc;
+	    padding: 6px 12px;
+}
+div.htmlInput > pb-text > div > div {
+	padding:0px 15px;
+	label {
+		padding-left: 0px;
+	}
+}
+div.label {
+	h5 {
+		color: $brand-primary;
+		font-weight: 700;
+		padding-left:10px;
+		margin: 0;
+	}
+}
+
+/* links */
+a {
+    color: #337ab7;
+    text-decoration: none;
+    font-weight: 600;
+}
+a:hover {
+    text-decoration: none;
+    color: #4499DD;
+}
+
+/* Modal */
+@media (min-width: 992px) {
+	.modal-dialog.modal-lg {
+	    width: calc(100vw - 5%);
+	}
+}
+@media (min-width: 768px) {
+	.modal-dialog.modal-lg {
+	    width: calc(100vw - 5%);
+	}
+}
+.modal-header {
+    padding: 5px 10px;
+    border-bottom: 1px solid #D5d5d5;
+    background: rgba(0,0,0,0.03);
+    top: -4px;
+    box-shadow: 0 0 6px #D5d5d5;
+}
+
+.modal-footer {
+    padding: 10px 15px;
+    text-align: right;
+    /*border-top: 1px solid #d5d5d5;
+    background: rgba(0,0,0,0.03);
+    box-shadow: 0 0 6px #D5d5d5;*/
+    border: none;
+}
+
+/*fix a bug for the autocomplete */
+ul.dropdown-menu {
+    z-index:9999;
+}
+
+.infoBlock {
+	background: #FFFFEE;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px #FEA;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.infoHint i:before,
+i.infoHint:before {
+    /*color: $brand-highlight;*/
+    color: $brand-primary;
+    vertical-align: top;
+}
+h1 .infoHint i:before,
+h1 i.infoHint:before,
+h2 .infoHint i:before,
+h2 i.infoHint:before {
+    font-size: 24px;
+}
+h3 .infoHint i:before,
+h3 i.infoHint:before {
+    font-size: 20px;
+}
+h4 .infoHint i:before,
+h4 i.infoHint:before {
+    font-size: 16px;
+    margin-top: -2px;
+}
+/*search field*/
+div.searchField:before {
+    content: "\e003";
+    font-family: 'Glyphicons Halflings';
+    color: #999;
+    font-size: 20px;
+    position: absolute;
+    z-index: 999;
+    top: 4px;
+    left: 20px;
+}
+
+div.searchField input[type="text"] {
+    padding-left:30px;
+}
+/*horizontal tabs*/
+div[vertical=false] {
+	margin-top: 10px;
+	
+	> ul.nav.nav-tabs {
+		border: 0px;
+		
+		&:after {
+		    background: white;
+		    width: 100%;
+		    height: 10px;
+		    position: absolute;
+		    top: 50px;
+		    z-index: 3;
+    		border-top: 1px solid #ccc;
+		}
+	
+		> li:after {
+		    content: " ";
+		    width: 17px;
+		    height: 42px;
+		    position: absolute;
+		    top: 3px;
+		    right: -6px;
+		    transform: rotate(-22deg);
+		    border-right: 1px solid #ccc;
+		    background: #f4f4f4;
+	    	z-index: 1;
+		}
+	
+		> li>a {
+	   		margin-right: 2px;
+		    line-height: 1.42857143;
+		    border: 1px solid #ccc;
+		    border-radius: 4px 4px 0 0;
+		    background: #f4f4f4;
+		    z-index: 1;
+		}
+	
+		> li.active {
+			z-index:4;
+			> a {
+		    	background: #fff;
+		    	border-bottom: 1px solid #fff;
+			}
+		
+			&:after {
+			    background: #fff;
+			}
+		}
+	}
+	
+	> div.tab-content {
+	    margin-top: 50px;
+    	padding: 10px;
+	}
+}
+/*vertical tabs */
+div[vertical=true] {
+	> ul.nav.nav-tabs.nav-stacked {
+	    width: 220px;
+	    float: left;
+	    border: 0;
+	    margin-top: 40px;
+	}
+	
+	> div.tab-content {
+	    width: calc(100% - 220px);
+	    float: left;
+	    border: 1px solid #ddd;
+	    min-height: 50vh;
+	    padding: 10px;
+	}
+	
+	.nav-tabs>li>a {
+	    /*color: #555;*/
+	    background-color: #eee;
+	    border: 1px solid #ddd;
+	    cursor: default;
+	}
+	
+	.nav-tabs>li.active {
+    	margin-right: -4px;
+	}
+	
+	.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+	    color: #555;
+	    background-color: #fff;
+	    border: 1px solid #ddd;
+	    cursor: default;
+    	border-right-color: white;
+	}
+}
+
+
+
+.control-label--required:after {
+    position: absolute;
+    margin-left: 3px;
+}
+
+.btn-pink .btn.btn-primary {
+    background-color: $brand-pink;
+    border-color: $brand-pink;
+}
+.component.nopadding {
+	padding: 0px;	
+}
+
+.comment:nth-child(even) {
+    background: aliceblue;
+}

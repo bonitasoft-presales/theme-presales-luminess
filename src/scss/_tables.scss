@@ -1,0 +1,82 @@
+.table-responsive {
+	
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px #ccc;
+    border: 1px solid #ddd;
+    
+	table {
+		
+	    border: 0px;
+		margin-bottom: 0px;
+		th {
+		    border-bottom: 1px solid #B8B6B6;
+		}
+		
+		.bo-SortButton {
+			white-space: nowrap;
+		}
+		
+		td.action,
+		th.action {
+			text-align: center;
+			a::before,
+			i::before {
+			    color: $brand-highlight;
+			    font-size: 21px;
+			    margin-left: 2px;
+			    margin-right: 2px;
+    		}
+		}
+		td > a.tableaction {
+			width:100%;
+			cursor:pointer;
+			display:inline-block;
+		}
+	}
+	
+	.table-bordered>thead>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>tfoot>tr>td {
+	    border-left: 0px;
+	    border-right: 0px;
+	}
+}
+
+div.table-header {
+    align-content: space-between;
+    display: flex;
+    flex: 1;
+}
+div.table-header .left {
+    margin: 5px;
+}
+div.table-header .left h1,
+div.table-header .left h2,
+div.table-header .left h3,
+div.table-header .left h4,
+div.table-header .left h5,
+div.table-header .left h6 {
+    margin: 0px;
+    float: left;
+}
+div.table-header .left button {
+    margin-left: 20px;
+}
+span.pagination-header {
+    flex: 1;
+    text-align: right;
+    margin: auto;
+}
+div.table-footer {
+    text-align: right;
+    padding: 10px;
+}
+
+div.table-header .changePageSize select{
+    padding: 3px;
+    margin: 3px;
+    border: 1px solid $brand-primary;
+    border-radius: 3px;
+    box-shadow: 0 0 2px #666;
+}
+div.table-responsive.nospace table {
+    margin-bottom: 0px;
+}

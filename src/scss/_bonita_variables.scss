@@ -2,13 +2,11 @@
 //${project.basedir}/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variable.scss
 
 //Brand colors
-$brand-primary: #0669BF;
-$brand-secundary: #0477BF;
-$brand-terciary: #04ADBF;
-$brand-fourth: #F2D272;
-$brand-fifth: #F25F29;
+$brand-primary: #808080;
+$brand-pink: #e85570;
+$brand-highlight: #7EE2A7;
 $brand-success: #008000;
-$brand-info: $brand-terciary;
+$brand-info: #1B870B;
 $brand-warning: #dd5600;
 $brand-danger: #c71c22;
 
@@ -16,22 +14,15 @@ $gray-light: #999999;
 $white: #ffffff;
 
 //Text
-$text-color: #495057;
+$text-color: $brand-primary;
 
-//$headings-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headings-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $headings-line-height:   1.2;
 
 $state-success-text: #468847;
 $state-info-text: #3a87ad;
 $state-warning-text: #c09853;
 $state-danger-text:  #b94a48;
-
-//Fonts
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-family-serif: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-
-//Link
-$link-color: $text-color;
 
 //Components
 $padding-large-vertical: 14px;
@@ -71,16 +62,16 @@ $navbar-default-toggle-hover-bg: #1a242f;
 $navbar-default-toggle-icon-bar-bg: $white;
 $navbar-default-toggle-border-color: #1a242f;
 
-$navbar-inverse-bg: $brand-primary;
+$navbar-inverse-bg: #033c73;
 $navbar-inverse-color: $white;
 $navbar-inverse-link-color: $white;
 
-$navbar-inverse-link-hover-bg: $brand-secundary;
-$navbar-inverse-link-active-bg: $brand-secundary;
+$navbar-inverse-link-hover-bg: #022f5a;
+$navbar-inverse-link-active-bg: #022f5a;
 $navbar-inverse-link-disabled-color: #cccccc;
 
-$navbar-inverse-toggle-border-color: $brand-secundary;
-$navbar-inverse-toggle-hover-bg: $brand-secundary;
+$navbar-inverse-toggle-border-color: #022f5a;
+$navbar-inverse-toggle-hover-bg: #022f5a;
 $navbar-inverse-toggle-icon-bar-bg: $white;
 
 //Dropdown
@@ -113,21 +104,32 @@ $badge-bg: $brand-primary;
 
 //Panel
 $panel-border-color: #dddddd;
-$panel-primary-border: $panel-border-color;
-$panel-primary-text: #fff;
-$panel-success-border: $panel-border-color;
-$panel-success-text: $panel-primary-text;
-$panel-info-border: $panel-border-color;
-$panel-info-text: $panel-primary-text;
-$panel-warning-border: $panel-border-color;
-$panel-warning-text: $panel-primary-text;
-$panel-danger-border: $panel-border-color;
-$panel-danger-text: $panel-primary-text;
 
-$panel-success-heading-bg: $brand-success;
-$panel-info-heading-bg: $brand-info;
-$panel-warning-heading-bg: $brand-warning;
-$panel-danger-heading-bg: $brand-danger;
+$panel-primary-border: $brand-primary;
+$panel-primary-text: #fff;
+$panel-primary-heading-bg: $brand-primary;
+
+$panel-highlight-border: $brand-highlight;
+$panel-highlight-text: #fff;
+$panel-highlight-heading-bg: $brand-highlight;
+
+$panel-success-border: #d6e9c6;
+$panel-success-text: #3c763d;
+$panel-success-heading-bg: #dff0d8;
+
+$panel-info-border: #d9edf7;
+$panel-info-text: #31708f;
+$panel-info-heading-bg: #d9edf7;
+
+$panel-warning-border: #faebcc;
+$panel-warning-text: #8a6d3b;
+$panel-warning-heading-bg: #fcf8e3;
+
+$panel-danger-border: #f2dede;
+$panel-danger-text: #a94442;
+$panel-danger-heading-bg: #f2dede;
+
+
 
 //Glyphicons fonts
 $icon-font-path: "./fonts/";

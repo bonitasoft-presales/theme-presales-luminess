@@ -1,0 +1,149 @@
+form.panel {
+    padding: 0px;
+}
+
+.panel {
+	>.panel-heading,
+	>div>div .panel-heading {
+		margin: 0px;	
+		    
+		h1,h2,h3,h4,h5,h6 {
+			margin-top: 0;
+			margin-bottom: 0;
+			
+			i.right {
+				float:right;
+			}
+		}
+	}
+	&.panel-primary {
+	    border-color: $brand-primary;
+	    
+	    >.panel-heading,
+		>div>div .panel-heading {
+		    color: $panel-primary-text;
+		    background-color: $panel-primary-heading-bg;
+		    border-color: $panel-primary-border;
+		    custom-title-with-icon i {
+		    	color: $panel-primary-text;
+		    }
+		}
+	}
+	&.panel-highlight {
+	    border-color: $panel-highlight-border;
+	    
+	    >.panel-heading,
+		>div>div .panel-heading {
+		    color: $panel-highlight-text;
+		    background-color: $panel-highlight-heading-bg;
+		    border-color: $panel-highlight-border;
+		    custom-title-with-icon i {
+		    	color: $panel-highlight-text;
+		    }
+		}
+	}
+	&.panel-success {
+	    border-color: $panel-success-border;
+	    
+	    >.panel-heading,
+		>div>div .panel-heading {
+		    color: $panel-success-text;
+		    background-color: $panel-success-heading-bg;
+		    border-color: $panel-success-border;
+		    custom-title-with-icon i {
+		    	color: $panel-success-text;
+		    }
+		}
+	}
+	&.panel-info {
+	    border-color: $panel-info-border;
+	    
+	    >.panel-heading,
+		>div>div .panel-heading {
+		    color: $panel-info-text;
+		    background-color: $panel-info-heading-bg;
+		    border-color: $panel-info-border;
+		    custom-title-with-icon i {
+		    	color: $panel-info-text;
+		    }
+		}
+	}
+	&.panel-warning {
+	    border-color: $panel-warning-border;
+	    
+	    >.panel-heading,
+		>div>div .panel-heading {
+		    color: $panel-warning-text;
+		    background-color: $panel-warning-heading-bg;
+		    border-color: $panel-warning-border;
+		    custom-title-with-icon i {
+		    	color: $panel-warning-text;
+		    }
+		}
+	}
+	&.panel-danger {
+	    border-color: $panel-danger-border;
+	    
+	    >.panel-heading,
+		>div>div .panel-heading {
+		    color: $panel-danger-text;
+		    background-color: $panel-danger-heading-bg;
+		    border-color: $panel-danger-border;
+		    custom-title-with-icon i {
+		    	color: $panel-danger-text;
+		    }
+		}
+	}
+}
+
+/* collapsable panels */
+.panel-group {
+	
+	> div.row {
+	    /*margin-left: 0px;
+	    margin-right: 0px;*/
+		    
+		/*> div div.component {
+	    	margin-bottom: 0px;
+	    	margin-top: 0px;
+	   		padding-left: 0px;
+	   		padding-right: 0px;
+
+		}*/
+			
+	}
+
+	.panel {
+		padding-left: 0px;
+		padding-right: 0px;
+		    
+		> div.row {
+		    margin-left: 0px;
+		    margin-right: 0px;
+		    
+			> div > div.component {
+		    	margin-bottom: 0px;
+		    	margin-top: 0px;
+		   		padding-left: 0px;
+		   		padding-right: 0px;
+			}
+		}	
+			
+		> .panel-heading,
+		.panel-heading {
+		    color: #333;
+		    background-color: #f5f5f5;
+		    border-color: #ddd;
+		    
+		   .panel-title {
+		    	width: 100%;
+		    	
+		    	i:before {
+		    		margin-right:5px;
+    				vertical-align: middle;
+		    	}
+		    }
+		}
+	}
+		
+}
