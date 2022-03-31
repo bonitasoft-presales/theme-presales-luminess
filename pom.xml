@@ -3,12 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.bonitasoft.presales.theme</groupId>
-    <artifactId>theme-presales-template</artifactId>
+    <artifactId>theme-presales-luminess</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Theme for presales BPM template</name>
-    <description>Describe your project here</description>
+    <name>Luminess theme</name>
+    <description>Presales theme for Luminess</description>
 
     <properties>
         <node.version>v14.17.3</node.version>
