@@ -5,10 +5,10 @@ body {
 		&:first-child {
 		
 			.layout-header {
-			    background: $brand-primary;
+			    background: $gray-light;
 			    
 				.btn-link {
-				    color: white;
+				    color: $brand-primary;
 				}
 			}
 			
